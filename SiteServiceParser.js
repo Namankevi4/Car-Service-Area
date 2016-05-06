@@ -28,7 +28,7 @@ exports.parse = function parse(fn) {
                     var service = {};
                     // name
                     service.name = $('#wrap > div:nth-child(2) > h1').text();
-                    // adress
+                    // address
                     var l = $('#address > b').children().length;                   
                     service.address = [];
                     for(var i=1; i <= l; i++)
