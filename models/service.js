@@ -4,6 +4,7 @@ var mongoose = require('../mongoose'),
 var schema = new Schema({
     name:{
         type: String,
+        unique: true,
         required: true
     },
     address:{

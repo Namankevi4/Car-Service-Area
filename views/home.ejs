@@ -1,19 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>
-        <%= tittle %>
-    </title>
-    <style type="text/css">
-        body {
-            padding: 50px;
-            font: 30px Helvetica, Arial, sans-serif;
-        }
-    </style>
-</head>
+<% layout('./layout/page') -%>
 
-<body>
-    <h1><%= tittle%></h1>
-</body>
-</html>
+<h1>Services:</h1>
+
+<% services.forEach(function(service) { %>
+<table>
+    <tr>
+        <td colspan="2"><%= service.name%></td>
+    </tr>
+    <tr>
+        <td><p>Адрес</p></td>
+        <td><p><%= service.address%></p></td>
+    </tr>
+    <tr>
+        <td><p>Время работы</p></td>
+        <td><p><%= service.workinghours%></p></td>
+    </tr>
+    <tr>
+        <td><p>email</p></td>
+        <td><p><%= service.email%></p></td>
+    </tr>
+    <tr>
+        <td><p>Описание</p></td>
+        <td><p><%= service.description%></p></td>
+    </tr>
+    <tr>
+        <td><p>production</p></td>
+        <td><p><%= service.production%></p></td>
+    </tr>
+    <tr>
+        <td><p>info</p></td>
+        <td><p><%= service.info%></p></td>
+    </tr>
+</table>
+<br/><br/>
+    <% }); %>

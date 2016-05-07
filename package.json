@@ -13,6 +13,7 @@
         "cheerio": "~0.20.0",
         "mongodb": "~2.1.18",
         "mongoose": "~4.4.15",
-        "async": "~2.0.0-rc.4"
+        "async": "~2.0.0-rc.4",
+        "ejs-locals": "~1.0.2"        
     }        
 }
