@@ -5,19 +5,21 @@ exports.home = function(req, res) {
             return res.render('home',{services});
         } else {
             res.statusCode = 500;
-            log.error('Internal error(%d): %s',res.statusCode,err.message);
-            return res.send({ error: 'Server error' });
+            return res.render('error', { error: 'Server error' });
         }
     });
 }
 exports.homeById = function(req, res) {
        Service.findById(req.params.id, function (err, service) {
         if (!err) {
-            return res.send({service: service});
-        } else {
+            return res.render('servicesId', {service});
+        } else if(service === undefined) {
+            res.statusCode = 404;
+            return res.render('error', {error: 'Not Found' });
+        }
+         {
             res.statusCode = 500;
-            log.error('Internal error(%d): %s',res.statusCode,err.message);
-            return res.send({ error: 'Server error' });
+            return res.render('error', {error: 'Server error' });
         }
     });
 }

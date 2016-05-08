@@ -1,0 +1,9 @@
+.ServiceContent {
+    margin-left: 20%;
+    width: 60%;
+    color: red;
+}
+.ServiceContent p {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 15pt;
+}

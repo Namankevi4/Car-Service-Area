@@ -1,9 +1,12 @@
 <% layout('./layout/page') -%>
-<h1 class="text-primary"><% service.name %></h1>
-<h3><% service.address %></h3>
-<h3><% service.workinghours %></h3>
-<h3><% service.email %></h3>
-<h3><% service.production %></h3>
-<h3><% service.info %></h3>
-<p><% service.description %></p>
-<a class="btn btn-primary">Return</a>
+<div class="ServiceContent">
+    <p class="text-primary"><%= service.name %></p>
+    <p><%= service.address %></p>
+    <p><%= service.workinghours %></p>
+    <p><%= service.site %></p>
+    <p><%= service.email %></p>
+    <p><%= service.production %></p>
+    <p><%= service.info %></p>
+    <p><%= service.description %></p>
+    <a class="btn btn-primary" href="/home">Return</a>
+</div>
