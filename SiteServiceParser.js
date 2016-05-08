@@ -39,6 +39,8 @@ exports.parse = function parse(fn) {
                     service.workinghours = $('#workinghours').text();
                     // email
                     service.email = $('#email > a > span').text();
+                    //site
+                    service.site = $('#list_sites > div > a').text();
                     // description
                     var description =  $('#description').text();
                     service.description = description.replace(/^\s+/, "").replace(/\s+$/, "");

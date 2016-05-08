@@ -12,7 +12,7 @@ var createdb = require('./CreateDB');
 
 app.get('/', function(req, res) { res.redirect('home') });
 app.get('/home', pages.home);
-
+app.get('/home/:id', pages.homeById);
 
 
 module.exports = app;

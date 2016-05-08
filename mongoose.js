@@ -1,6 +1,3 @@
 var mongoose = require('mongoose');
-
-//надо забрать с конфига
-mongoose.connect('mongodb://localhost/test');
-
+mongoose.connect(require('./config').get("mongoose:uri"));
 module.exports = mongoose;
