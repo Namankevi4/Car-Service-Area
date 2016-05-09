@@ -38,9 +38,10 @@ exports.parse = function parse(fn) {
                     // workinghours
                     service.workinghours = $('#workinghours').text();
                     // email
-                    service.email = $('#email > a > span').text();
+                    service.email = $('#email > a').text();
                     //site
-                    service.site = $('#list_sites > div > a').text();
+                    var site = $('#list_sites > div').text();
+                    site = site.match('/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/');
                     // description
                     var description =  $('#description').text();
                     service.description = description.replace(/^\s+/, "").replace(/\s+$/, "");

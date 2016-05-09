@@ -1,12 +1,30 @@
 <% layout('./layout/page') -%>
-<div class="ServiceContent">
-    <p class="text-primary"><%= service.name %></p>
-    <p><%= service.address %></p>
-    <p><%= service.workinghours %></p>
-    <p><%= service.site %></p>
-    <p><%= service.email %></p>
-    <p><%= service.production %></p>
-    <p><%= service.info %></p>
-    <p><%= service.description %></p>
-    <a class="btn btn-primary" href="/home">Return</a>
-</div>
+    <div class="ServiceContent">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-primary"><%= service.name %></h1>
+                <p> <b>Адрес: </b>
+                    <%= service.address %>
+                </p>
+                <p> <b>Время работы: </b>
+                    <%= service.workinghours %>
+                </p>
+                <p> <b>Сайт: </b> <img src="http://orgpage.by/content/img/ico-web.png" />
+                    <%= service.site %>
+                </p>
+                <p> <b>Email: </b> <img src="http://orgpage.by/content/img/ico-mail.png" />
+                    <%= service.email %>
+                </p>
+                <p> <b>Услуги: </b>
+                    <%= service.production %>
+                </p>
+                <p> <b>Информация: </b>
+                    <%= service.info %>
+                </p>
+                <p> <b>Описание: </b>
+                    <%= service.description %>
+                </p>
+                <a class="btn btn-primary" href="/home">Назад</a>
+            </div>
+        </div>
+    </div>

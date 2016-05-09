@@ -1,18 +1,26 @@
 <% layout('./layout/page') -%>
-<% services.forEach(function(service) { %>
-<div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="http://godnota.com/uploads/posts/t/l-5082.jpg" class="img-responsive">
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-primary"><%= service.name %></h1>
-            <h3><%= service.address %></h3>
-            <p><%= service.description %></p>
-			<a class="btn btn-primary" href="/home/<%=service._id %>">More</a>
-          </div>
+    <% services.forEach(function(service) { %>
+        <div class="ServiceContent">
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="http://devsidauto.ru/uploads/posts/2014-10/1412528010_1.jpg" class="img-responsive">
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="text-primary">
+                                <%= service.name %>
+                            </h1>
+                            <p> <b>Адрес: </b>
+                                <%= service.address %>
+                            </p>
+                            <p><b>Описание: </b>
+                                <%= service.description %>
+                            </p>
+                            <a class="btn btn-primary" href="/home/<%=service._id %>">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-<% }); %>
+        <% }); %>
