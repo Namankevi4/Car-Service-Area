@@ -19,6 +19,15 @@ app.get('/', function(req, res) { res.redirect('home') });
 app.get('/home', pages.home);
 app.get('/home/:id', pages.homeById);
 
+var Service = require('./models/service').Service;
+app.get('/services', function(req, res){
+  Service.find(function (err, services) {
+        if (!err) {
+          console.log("app /services");
+            res.json(services);
+        } 
+    });
+});
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
@@ -31,6 +40,5 @@ app.use(function(err, req, res, next) {
     error: err.message,
   });
 });
-
-
+ 
 module.exports = app;

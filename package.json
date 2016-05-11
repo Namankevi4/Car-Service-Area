@@ -16,6 +16,8 @@
         "async": "~2.0.0-rc.4",
         "ejs-locals": "~1.0.2",
         "morgan": "~1.7.0",
-        "fs": "~0.0.2"        
+        "fs": "~0.0.2",
+        "angular" : "~1.5.5",
+        "angular-utils-pagination": "~0.11.1"
     }        
 }
