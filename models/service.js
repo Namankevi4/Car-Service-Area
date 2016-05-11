@@ -9,27 +9,27 @@ var schema = new Schema({
     },
     address:{
         type: String,
-        requried: true
+        requried: false
     },
     workinghours:{
         type: String,
-        required: true
+        required: false
     },
     email:{
         type: String,
-        required: true
+        required: false
     },
     description:{
         type: String,
-        required: true
+        required: false
     },
     production:{
         type: String,
-        required: true
+        required: false
     },
     info:{
         type: String,
-        required: true
+        required: false
     },
     created:{
         type:Date,
